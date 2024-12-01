@@ -30,7 +30,7 @@ public class OrderReceiver {
         try {
             // Deserialize the order JSON
             Map<String, Object> order = objectMapper.readValue(orderMessage, Map.class);
-            
+
             // Extract order details
             String orderId = (String) order.get("order_id");
             String fullName = (String) ((Map<String, Object>) order.get("customer")).get("name");
@@ -67,16 +67,6 @@ public class OrderReceiver {
                     System.out.println("Started process for Order ID: " + orderId + ", Customer: " + firstName + " " + lastName + ", Item: " + type + "-" + size + "-" + color + "-" + i);
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    private void updateOrder(String orderMessage) {
-        try {
-            // When an order completes one step, 
-            // we will update the order's status in the MQ, 
-            // and write the new record to the database
-
         } catch (Exception e) {
             e.printStackTrace();
         }
