@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             targetNamespace="http://jbpm.org/example">
+
+    <process id="ClothingProcess" name="Clothing Process" isExecutable="true">
+        <startEvent id="start" name="1.Start"/>
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="clothingSampling"/>
+
+        <scriptTask id="clothingSampling" name="2.Clothing Sampling">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow2" sourceRef="clothingSampling" targetRef="laying"/>
+
+        <scriptTask id="laying" name="3.Laying">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow3" sourceRef="laying" targetRef="marking"/>
+
+        <scriptTask id="marking" name="4.Marking">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow4" sourceRef="marking" targetRef="cutting"/>
+
+        <scriptTask id="cutting" name="5.Cutting">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow5" sourceRef="cutting" targetRef="stitching"/>
+
+        <scriptTask id="stitching" name="6.Stitching">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow6" sourceRef="stitching" targetRef="checking"/>
+
+        <scriptTask id="checking" name="7.Checking">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow7" sourceRef="checking" targetRef="pressing"/>
+
+        <scriptTask id="pressing" name="8.Pressing">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow8" sourceRef="pressing" targetRef="packaging"/>
+
+        <scriptTask id="packaging" name="9.Packaging">
+            <script>
+                long delay = (long)(Math.random() * 2000);
+                Thread.sleep(delay);
+            </script>
+        </scriptTask>
+        <sequenceFlow id="flow9" sourceRef="packaging" targetRef="end"/>
+
+        <endEvent id="end" name="10.End"/>
+    </process>
+</definitions>

@@ -1,0 +1,7 @@
+com/company/red_collar/JBPMConfig$1.class
+com/company/red_collar/InfluxDBConfig.class
+com/company/red_collar/JBPMConfig.class
+com/company/red_collar/RedCollarApplication.class
+com/company/red_collar/OrderReceiver.class
+com/company/red_collar/ClothingProcessService.class
+com/company/red_collar/RabbitMQConfig.class
