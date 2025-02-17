@@ -1,4 +1,4 @@
-package com.company.red_collar.config;
+package com.company.service;
 
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;

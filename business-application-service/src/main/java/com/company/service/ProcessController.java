@@ -1,4 +1,4 @@
-package com.company.red_collar.controller;
+package com.company.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.company.red_collar.model.ProcessResponse;
+import com.company.model.ProcessResponse;
 
 @RestController
 @RequestMapping("/process")

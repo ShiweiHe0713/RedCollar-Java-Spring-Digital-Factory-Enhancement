@@ -1,4 +1,4 @@
-package com.company.red_collar.config;
+package com.company.service;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
