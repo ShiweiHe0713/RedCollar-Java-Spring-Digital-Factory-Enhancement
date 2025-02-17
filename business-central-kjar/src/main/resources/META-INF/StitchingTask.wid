@@ -1,0 +1,15 @@
+[
+    {
+        "name": "StitchingTask",
+        "displayName": "StitchingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles fabric stitching process",
+        "parameters": {
+            "stitchType": new StringDataType(),
+            "threadType": new StringDataType()
+        },
+        "results": {
+            "output": new StringDataType()
+        }
+    }
+]

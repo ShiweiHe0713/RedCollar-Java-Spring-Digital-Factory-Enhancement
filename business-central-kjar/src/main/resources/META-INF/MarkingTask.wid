@@ -1,0 +1,10 @@
+[
+        "name" : "MarkingTask",
+        "displayName" : "MarkingTask",
+        "category" : "jbpm-workitems-custom",
+        "description" : "Handles pattern marking process",
+        "parameters" : [
+            "patternType" : new StringDataType(),
+            "markingMethod" : new StringDataType()
+        ]
+    ],

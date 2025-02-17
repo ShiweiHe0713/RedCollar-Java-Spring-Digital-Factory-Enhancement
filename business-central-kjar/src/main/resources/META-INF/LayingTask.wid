@@ -1,0 +1,10 @@
+[
+        "name" : "LayingTask",
+        "displayName" : "LayingTask",
+        "category" : "jbpm-workitems-custom",
+        "description" : "Handles fabric laying process",
+        "parameters" : [
+            "fabricType" : new StringDataType(),
+            "layingMethod" : new StringDataType()
+        ]
+    ],

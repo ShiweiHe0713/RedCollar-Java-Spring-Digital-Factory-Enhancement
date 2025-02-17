@@ -12,9 +12,80 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler("mary", "mary")</identifier>
+            <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler(classLoader)</identifier>
             <parameters/>
             <name>Rest</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.SamplingHandler()</identifier>
+            <parameters>
+                <parameter>fabricType</parameter>
+                <parameter>sampleSize</parameter>
+            </parameters>
+            <name>SamplingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.LayingHandler()</identifier>
+            <parameters>
+                <parameter>fabricType</parameter>
+                <parameter>layingMethod</parameter>
+            </parameters>
+            <name>LayingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.MarkingHandler()</identifier>
+            <parameters>
+                <parameter>patternType</parameter>
+                <parameter>markingMethod</parameter>
+            </parameters>
+            <name>MarkingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.CuttingHandler()</identifier>
+            <parameters>
+                <parameter>cuttingMethod</parameter>
+                <parameter>pieceCount</parameter>
+            </parameters>
+            <name>CuttingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.StitchingHandler()</identifier>
+            <parameters>
+                <parameter>stitchType</parameter>
+                <parameter>threadType</parameter>
+            </parameters>
+            <name>StitchingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.CheckingHandler()</identifier>
+            <parameters>
+                <parameter>qualityStandard</parameter>
+            </parameters>
+            <name>CheckingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.PressingHandler()</identifier>
+            <parameters>
+                <parameter>pressingTemperature</parameter>
+                <parameter>pressingDuration</parameter>
+            </parameters>
+            <name>PressingTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.company.service.PackagingHandler()</identifier>
+            <parameters>
+                <parameter>packagingType</parameter>
+                <parameter>quantity</parameter>
+            </parameters>
+            <name>PackagingTask</name>
         </work-item-handler>
     </work-item-handlers>
     <environment-entries/>
