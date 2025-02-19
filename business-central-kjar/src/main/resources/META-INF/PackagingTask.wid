@@ -1,0 +1,10 @@
+[
+        "name" : "PackagingTask",
+        "displayName" : "PackagingTask",
+        "category" : "jbpm-workitems-custom",
+        "description" : "Handles product packaging process",
+        "parameters" : [
+            "packagingType" : new StringDataType(),
+            "quantity" : new StringDataType()
+        ]
+    ],

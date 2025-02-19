@@ -1,0 +1,10 @@
+[
+        "name" : "SamplingTask",
+        "displayName" : "SamplingTask",
+        "category" : "jbpm-workitems-custom",
+        "description" : "Handles sampling process",
+        "parameters" : [
+            "fabricType" : new StringDataType(),
+            "sampleSize" : new StringDataType()
+        ]
+    ],

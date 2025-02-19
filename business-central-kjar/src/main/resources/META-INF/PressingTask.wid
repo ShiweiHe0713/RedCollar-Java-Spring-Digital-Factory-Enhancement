@@ -1,0 +1,13 @@
+[
+        "name" : "PressingTask",
+        "displayName" : "PressingTask",
+        "category" : "jbpm-workitems-custom",
+        "description" : "Handles garment pressing process",
+        "parameters" : [
+            "pressingTemperature" : new StringDataType(),
+            "pressingDuration" : new StringDataType()
+        ],
+        "results" : [ 
+            "Result" : new StringDataType()
+        ],
+    ],

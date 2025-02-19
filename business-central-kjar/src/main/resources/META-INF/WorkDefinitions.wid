@@ -1,0 +1,82 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+[
+    {
+        "name": "SamplingTask",
+        "displayName": "SamplingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles sampling process",
+        "parameters": {
+            "fabricType": "new StringDataType()",
+            "sampleSize": "new StringDataType()"
+        }
+    },
+    {
+        "name": "LayingTask",
+        "displayName": "LayingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles fabric laying process",
+        "parameters": {
+            "fabricType": "new StringDataType()",
+            "layingMethod": "new StringDataType()"
+        }
+    },
+    {
+        "name": "MarkingTask",
+        "displayName": "MarkingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles pattern marking process",
+        "parameters": {
+            "patternType": "new StringDataType()",
+            "markingMethod": "new StringDataType()"
+        }
+    },
+    {
+        "name": "CuttingTask",
+        "displayName": "CuttingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles fabric cutting process",
+        "parameters": {
+            "cuttingMethod": "new StringDataType()",
+            "pieceCount": "new StringDataType()"
+        }
+    },
+    {
+        "name": "StitchingTask",
+        "displayName": "StitchingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles fabric stitching process",
+        "parameters": {
+            "stitchType": "new StringDataType()",
+            "threadType": "new StringDataType()"
+        }
+    },
+    {
+        "name": "CheckingTask",
+        "displayName": "CheckingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles quality checking process",
+        "parameters": {
+            "qualityStandard": "new StringDataType()"
+        }
+    },
+    {
+        "name": "PressingTask",
+        "displayName": "PressingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles garment pressing process",
+        "parameters": {
+            "pressingTemperature": "new StringDataType()",
+            "pressingDuration": "new StringDataType()"
+        }
+    },
+    {
+        "name": "PackagingTask",
+        "displayName": "PackagingTask",
+        "category": "jbpm-workitems-custom",
+        "description": "Handles product packaging process",
+        "parameters": {
+            "packagingType": "new StringDataType()",
+            "quantity": "new StringDataType()"
+        }
+    }
+]

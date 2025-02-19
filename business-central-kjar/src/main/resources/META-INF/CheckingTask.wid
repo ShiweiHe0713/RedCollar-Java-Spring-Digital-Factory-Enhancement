@@ -1,0 +1,9 @@
+{
+    "name": "CheckingTask",
+    "displayName": "CheckingTask",
+    "category": "jbpm-workitems-custom",
+    "description": "Handles quality checking process",
+    "parameters": {
+        "qualityStandard": new StringDataType()
+    }
+}

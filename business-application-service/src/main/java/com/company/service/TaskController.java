@@ -1,4 +1,4 @@
-package com.company.red_collar.controller;
+package com.company.service;
 
 import org.jbpm.services.api.ProcessService;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.company.red_collar.RedCollarApplication;
+import com.company.RedCollarApplication;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
@@ -37,29 +37,6 @@ public class TaskController {
     // private KieSession kieSession;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-
-    /**
-    // InfluxDB properties
-    @Value("${influxdb.url}")
-    private String influxDbUrl;
-
-    @Value("${influxdb.token}")
-    private String influxDbToken;
-
-    @Value("${influxdb.bucket}")
-    private String bucket;
-
-    @Value("${influxdb.org}")
-    private String org;
-
-    private InfluxDBClient influxDBClient;
-
-     * Initialize the InfluxDB client after the bean is constructed.
-     @PostConstruct
-     public void initializeInfluxDB() {
-        influxDBClient = InfluxDBClientFactory.create(influxDbUrl, influxDbToken.toCharArray());
-    }
-    */
 
     /**
      * RabbitMQ Listener for Incoming Orders.

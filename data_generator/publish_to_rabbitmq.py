@@ -102,9 +102,9 @@ def send_orders_concurrently(num_orders):
 if __name__ == "__main__":
     # Generate and publish data
     try:
-        send_orders_concurrently(3)
+        send_orders_concurrently(1)
         
-        # Nonconcurrent sending 
+        # Nonconcurrent sending mvel
         # orders = [generate_order() for _ in range(2)]
         # for order in orders:
         #     send_order(order)
