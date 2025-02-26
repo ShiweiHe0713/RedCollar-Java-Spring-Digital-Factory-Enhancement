@@ -19,6 +19,19 @@ public class LayingHandler implements WorkItemHandler{
 
     @Override
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
+        // will be trigger by the message "sampling completed"(event)
+        // "sampling completed" can be sent from our curl or script to randomly generate messages as HTTP POST
+        
+        // scenarios: We have two orders(processes), they are in different status(some in sampling, some in laying). 
+        // Right now we are using HTTP POST to send messages to the processes, simulating factory has completed those tasks
+        // Every message will have order_id as an identifier to update the status of each order
+        // queue to keep track of orders, how many completed, 
+        // The data in DB is transienet(except things like users etc.), can't query db for progress update. must need MQ for this purpose
+        // depends on how event triggered in the process,
+        // JBPM evetn documetn: https://docs.jbpm.org/7.74.1.Final/jbpm-docs/html_single/#bpmn-events-con_business-processes
+            // how the events get triggered
+        // have a consumer in spring boot application that consumes message, then it triggers these event 
+
         System.out.println("Executing LayingTask...");
 
         String fabricType = (String) workItem.getParameter("fabricType");

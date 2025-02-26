@@ -28,6 +28,9 @@ public class SamplingHandler implements WorkItemHandler{
         System.out.println("Sample Size: " + sampleSize);
 
         Map<String, Object> results = new HashMap<>();
+        // event should drive the process(like event or users), not custom tasks
+        // 
+        
         results.put("Result", "Success");
 
         manager.completeWorkItem(workItem.getId(), results);

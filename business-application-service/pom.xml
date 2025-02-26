@@ -41,6 +41,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        
+        <dependency>
+		  <groupId>com.icegreen</groupId>
+		  <artifactId>greenmail-spring</artifactId>
+		  <version>1.5.10</version>
+		</dependency>
 
         <dependency>
             <groupId>com.influxdb</groupId>

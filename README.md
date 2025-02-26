@@ -11,3 +11,6 @@ This project was developed as part of the NYU CSCI-GA 3812 course, instructed by
 - business-central-kjar
     This is where all the business logic lies, such as Clothing_Process.bpmn, and every custom tasks' wid(work item handler) files. The mapping between the wid and the java handler class need to be mapped carefully using `kie-deployment-descriptor.xml` under business-central-kjar/src/main/resources/META-INF.
 
+
+**The business logic is:**
+![image](/assets/GarmentProcessDiagram_v1.2.png)
