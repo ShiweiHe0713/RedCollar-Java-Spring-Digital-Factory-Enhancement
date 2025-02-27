@@ -13,11 +13,11 @@ import javax.validation.constraints.Size;
 // TODO: marshalling strategy
 // JPA marshaller and persistence unit configured in the kie-deployment-descriptor.xml file from 12.6 JBPM Doc
 
-@javax.persistence.Entity  
-@javax.persistence.Table(name = "Person")  
-public class User extends org.drools.persistence.jpa.marshaller.VariableEntity  
-implements java.io.Serializable {
-// @Entity
+// @javax.persistence.Entity  
+// @javax.persistence.Table(name = "Person")  
+// public class User extends org.drools.persistence.jpa.marshaller.VariableEntity  
+// implements java.io.Serializable {
+@Entity
 @Table(name = "users",
     uniqueConstraints = {
       @UniqueConstraint(columnNames = "name"),
