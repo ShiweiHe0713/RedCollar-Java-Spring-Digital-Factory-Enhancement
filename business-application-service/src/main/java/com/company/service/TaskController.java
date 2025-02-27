@@ -22,6 +22,8 @@ import com.influxdb.client.write.Point;
 import com.influxdb.client.domain.WritePrecision;
 import org.kie.api.runtime.KieSession;
 
+import com.company.service.SamplingHandler;
+
 @RestController
 @RequestMapping("/task")
 public class TaskController {
@@ -44,21 +46,21 @@ public class TaskController {
      */
     @RabbitListener(queues = "order_queue")
     public void newOrder(String orderMessage) {
-        try {
-            // Parse the order message
-            Long processInstanceId = -1L;
-            // Map<String, Object> orderData = objectMapper.readValue(orderMessage, Map.class);
-            Map<String, Object> processVariables = new HashMap<>();
-            // processVariables.put("orderId", orderId);
-            processVariables.put("inspectionResult", true); // Default inspection result
-            processVariables.put("status", "Started");
-            processInstanceId = processService.startProcess(deploymentId, processId, processVariables);
-            logger.info("Created process " + processInstanceId);
-            // String orderId = (String) orderData.get("order_id");
+        // Parse the order message
+        Long processInstanceId = -1L;
+        // Map<String, Object> orderData = objectMapper.readValue(orderMessage, Map.class);
+        Map<String, Object> processVariables = new HashMap<>();
+        // processVariables.put("orderId", orderId);
+        processVariables.put("status", "Started");
+        processInstanceId = processService.startProcess(deploymentId, processId, processVariables);
+        logger.info("Created process " + processInstanceId);
+        // String orderId = (String) orderData.get("order_id");
 
+        try {
+        
             // Start the BPMN process for the order
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -87,7 +89,7 @@ public class TaskController {
 
     // @PostMapping("/sampling")
     // public String completeSampling(@RequestBody Map<String, Object> inputData) {
-    //     return completeTask("Sampling", inputData);
+    //     SamplingHandler.executeWorkItem();
     // }
 
     // @PostMapping("/laying")
